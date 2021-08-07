@@ -5,6 +5,8 @@ body {
     justify-content: space-evenly;
     align-content: space-between;
     padding: 10vh 5vw 0vh 5vw;
+    background-image: url("../resources/fondo-desktop.jpg");
+    color: white;
 }
 
 body img{
