@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    padding: 10vh 5vw 0vh 5vw;
+}
+
+body img{
+    height: 40vh;
+    width: auto;
+    border-radius: 10px;
+}
+
+h2{
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800;
+    line-height: 19px;
+    padding-bottom: 1vh;
+}
+
+h3{
+    font-size: 19px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+}
+
+p{
+    font-size: 17px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
+}
+
+#comprarEntradas{
+    background-image: url(resources/conjuro.svg);
+}
