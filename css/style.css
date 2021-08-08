@@ -35,6 +35,16 @@ p{
     font-weight: 500;
 }
 
-#comprarEntradas{
-    background-image: url(resources/conjuro.svg);
+#buyTicket{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30vw;
+    font-family: 'Catamaran', sans-serif;
+}
+
+#comprar{
+    background-color: blue;
+    width: 25vw;
+    font-family: 'Catamaran', sans-serif;
 }
