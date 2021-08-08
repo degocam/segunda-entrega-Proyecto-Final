@@ -1,14 +1,39 @@
-body {
+body{
+    background-image: url("../resources/fondo-desktop.jpg");
+    color: white;
+}
+
+#grilla{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-between;
-    padding: 10vh 5vw 0vh 5vw;
-    background-image: url("../resources/fondo-desktop.jpg");
-    color: white;
-    padding: 10vh 5vw 0vh 5vw;
+    padding: 1vh 5vw 0vh 5vw;
+}
 
+#main-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 5vh 0vw 5vh 0vw;
+}
+
+#main-navbar img{
+    height: 15vh;
+}
+
+a{
+    display: inline-block;
+    justify-content: space-between;
+    text-decoration: none;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
 }
 
 body img{

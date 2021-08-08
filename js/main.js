@@ -1,5 +1,7 @@
 //Esta es la estructura de la página de inicio de la app
 
+const grilla = document.getElementById('grilla');
+
 /*En esta constante creamos un objeto que representa una grilla que contiene todas las peliculas que actualmente se muestran en el cine ficticio
 sus horarios, nombre y poster*/
 const grillaPelis = [
@@ -12,13 +14,13 @@ const grillaPelis = [
     {nombre: "Top Gun: Maverick", horario: "15:55, 16:35, 18:50", img: "resources/top-gun.svg"},
     {nombre: "Matrix IV", horario: "18:00, 20:20, 22:00", img: "resources/matrix.svg"},
     {nombre: "Spiderman: Sin Camino<br> A Casa", horario: "17:00, 19:20, 21:00", img: "resources/spiderman.svg"},
-    {nombre: "Sing 2", horario: "14:15, 16:30, 18:00", img: "resources/sing-2.svg"},
-    {nombre: "Amor Sin Barreras", horario: "17:20, 19:45, 21:50", img: "resources/wss.svg"}
+    {nombre: "Sing 2", horario: "14:15, 16:30, 18:00", img: "resources/sing-2.svg"}
+    // {nombre: "Amor Sin Barreras", horario: "17:20, 19:45, 21:50", img: "resources/wss.svg"}
 ];
 
 //Se instancia cada película a partir de la grilla
 for (const pelicula of grillaPelis){
-    let cardPeli = document.createElement("div");
+    let cardPeli = document.createElement('div');
 
 //A través de DOM le damos el formato en que se va a mostrar la info del array de cada película en el HTML    
     cardPeli.innerHTML = 
@@ -28,5 +30,5 @@ for (const pelicula of grillaPelis){
         <p>${pelicula.horario}</p>`
 
 //Anidamos cardPeli en el body
-    document.body.appendChild(cardPeli);
+    grilla.appendChild(cardPeli);
 }
