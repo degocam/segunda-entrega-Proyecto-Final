@@ -1,37 +1,46 @@
-// Acá se obtienen los elementos HTML hechos en buy-page-html (formulario y divs)
-const form = document.getElementById('buyTicket');
-const divCard = document.getElementById('divCard')
-const inputNombre = document.getElementById('name');
-const inputEmail = document.getElementById('email');
-const inputCantEntradas = document.getElementById('cantidad');
-const botonComprar = document.getElementById('btn-comprar');
+//Esta es la sección que brinda información de la película
 
-// Evento que crea una card con la información de la película mostrada (Sin el nombre ni la hora)
-botonComprar.addEventListener('click', cardCompra);
+$(".infoPeli").append(
+    `<img src="resources/unavailable.svg" alt="">
+    <h2>Nombre Película</h2>
+    <p>Duis ullamco irure ex fugiat enim incididunt esse magna officia aliquip ipsum occaecat. 
+    Do tempor exercitation irure sint sint laboris minim nulla. Culpa minim nostrud mollit labore aliqua 
+    qui incididunt qui Lorem duis pariatur ipsum consequat tempor. Anim cillum dolore minim fugiat in velit cupidatat. 
+    Ex in ullamco aliqua laboris ex dolor ut duis dolor ipsum aliqua laboris fugiat.</p>
+    <h3>Duración: 115 minutos</h3>
+    <h3>Director: Fulano Mengano</h3>`);
 
-// Esta función es que recibe y envía los valores de cada input a sus respectivas funciones creadoras
-function cardCompra(event){
-    event.preventDefault();
+//Esta es la sección dónde se elige el horario y se compra la entrada
 
-    const valorNombre = inputNombre.value;
+$(".btn-horarios").click((e)=>{
 
-    const valorEmail = inputEmail.value;
+    $("#qEntradas").slideDown("fast");
+});
 
-    const valorQEntradas = inputCantEntradas.value;
+let horaElegida = $(".btn-horarios").click((e) =>{
+    console.log(e.target.value)
+});
 
-    crearEntrada(valorNombre, valorEmail, valorQEntradas)
+//Esta función toma la cantidad elegida en el <select> y realiza la operación
+let numeroEntradas = document.getElementById("numEntradas");
 
-    precioTotal(valorQEntradas, 2990)
-}
+let cantEntradas = $("#btn-comprar").click(function(e){
+    e.preventDefault();
 
-//Esta es la función que muestra los detalles de la compra
-function crearEntrada(valorNombre, valorEmail, valorQEntradas){
-    const cardEntrada = document.createElement('div');
+    let cantidadEntradas = parseInt(numeroEntradas.value);
+    console.log(cantidadEntradas);
+    console.log(precioEntradas(cantidadEntradas, 2990));
+});
 
-    cardEntrada.className ="card-entrada";
-    cardEntrada.innerHTML = `<h3>Nombre: ${valorNombre}</h2>
-    <h3>email: ${valorEmail} </h3>
-    <h3>Cantidad de Entradas :${valorQEntradas}</h3>`;
-    
-    divCard.appendChild(cardEntrada)
-}
+function precioEntradas (a,b){
+    return totalEntradas = a * b;
+};
+
+$("#btn-comprar").click((e)=>{
+    e.preventDefault();
+
+    $(".cardEntradas").append(
+        `<p>Total: </p>
+        </div>`
+    );
+});

@@ -13,26 +13,49 @@
 </head>
 <body>
     <header>
-        <nav id="main-navbar">
-            <a href="#">Próximos Estrenos</a>
-            <a href="#">Confitería</a>
-            <a href="index.html"><img src="/resources/logo-cine.svg" alt="Home Cinema y claqueta de cine"></a>
-            <a href="#">Promociones</a>
-            <a href="#">Tarjeta Cine Movies</a>
-        </nav>
+        <!-- <nav id="main-navbar">
+            <a href="#">PRÓXIMOS ESTRENOS</a>
+            <a href="#">CONFITERÍA</a>
+            <img src="resources/logo-cine.svg" alt="Home Cinema y claqueta de cine">
+            <a href="#">PROMOCIONES</a>
+            <a href="#">TARJETA HOME CINEMA</a>
+        </nav> -->
     </header>
     <section id="comprarEntradas">
         <div class="infoPeli"></div>
         <div class="cardEntradas">
-            <form id="buyTicket">
+            <div id="horariosPelis">
+                <button class="btn-horarios" value="16:30">16:30</button>
+                <button class="btn-horarios" value="18:45">18:45</button>
+                <button class="btn-horarios" value="20:55">20:55</button></div>
+            <div id="qEntradas" style="display: none">
+                <img src="resources/butacas.svg" alt="Nuestros Clientes en una de nuestras salas">
+                <div><h3>Entrada General</h3>
+                <p> valor: CLP2.990 (Incluye cargo por servicio)</p>
+                </div>
+                <div>
+                <select class="numEntradas">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option></select>
+                </div>
+            </div>
+            <!-- <form id="buyTicket">
                 <label for="name">Indícanos tu nombre</label><input type="text" id="name">
                 <label for="email">Escribe tu correo al que llegará tu entrada</label><input type="email" id="email">
                 <label for="cantidad">¿Cuántas entradas llevarás?</label><input type="number" id="cantidad" min="1" max="10">
                 <input type="submit" id="btn-comprar" value="Comprar">
-            </form>
+            </form> -->
             <div id="divCard"></div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/buy-page.js"></script>
 </body>
 </html>
