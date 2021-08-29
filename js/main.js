@@ -2,7 +2,7 @@
 
 //Ya que estamos trabajando con tantas imágenes agregamos ready() para ayudar a la carga
 $(document).ready(function()
-{console.log("Está listo el DOM")}
+{    $("body").fadeIn(5000);}
 );
 
 //Esta sección despliega el menú
@@ -36,10 +36,10 @@ for (const pelicula of grillaPelis){
         <button class="btn-horarios">Ver Horarios</button></div>`);
 }
 
+
 //El botón "Comprar" va a direccionar al hacer click a la página donde se compra
 $(".btn-horarios").click((e) => {
+    e.preventDefault();
     window.location = "buy-page.html";
 }
 );
-
-JSON.stringify(grillaPelis);
